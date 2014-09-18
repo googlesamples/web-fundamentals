@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><!-- // [TEMPLATE header_full] --><title>Video: Specifying multiple typed video source files</title><style>#container {
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="cleartype" content="on"><link rel="stylesheet" href="/web/fundamentals/resources/samples/css/normalize.css"><link rel="stylesheet" href="/web/fundamentals/resources/samples/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto"><link rel="stylesheet" href="/web/fundamentals/resources/samples/css/base.css"><title>Video: Specifying multiple typed video source files</title><style>#container {
       max-width: 480px;
       margin-left: auto;
       margin-right: auto;
@@ -28,4 +28,17 @@ srcEvent.textContent = evt.type;
     
 }
 
-  init();</script></div><!-- // [TEMPLATE footer] -->
+  init();</script></div><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-24532603-1');ga('send','pageview');
+
+    var isCompleted = {};
+    function sampleCompleted(sampleName){
+      if (ga && !isCompleted.hasOwnProperty(sampleName)) {
+        ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+        isCompleted[sampleName] = true;
+      }
+    }</script>

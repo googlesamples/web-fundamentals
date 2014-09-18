@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><!-- // [TEMPLATE header_full] --><title>Images: Using media queries for conditional loading</title><style>.example {
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="cleartype" content="on"><link rel="stylesheet" href="/web/fundamentals/resources/samples/css/normalize.css"><link rel="stylesheet" href="/web/fundamentals/resources/samples/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto"><link rel="stylesheet" href="/web/fundamentals/resources/samples/css/base.css"><title>Images: Using media queries for conditional loading</title><style>.example {
         height: 400px;
         background-image: url(small.png);
         background-repeat: no-repeat;
@@ -18,7 +18,20 @@
 .desc {
         margin-top: 2em;
         text-align: center;
-      }</style><body role="main"><div class="example"></div><div class="desc">On viewports less than 500px, only the image of a phone will appear, while on viewports larger than 500px, a tablet will be visible with a checkboard background.</div><!-- // [TEMPLATE footer] --><script type="text/javascript">function init() {
+      }</style><body role="main"><div class="example"></div><div class="desc">On viewports less than 500px, only the image of a phone will appear, while on viewports larger than 500px, a tablet will be visible with a checkboard background.</div><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-24532603-1');ga('send','pageview');
+
+    var isCompleted = {};
+    function sampleCompleted(sampleName){
+      if (ga && !isCompleted.hasOwnProperty(sampleName)) {
+        ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+        isCompleted[sampleName] = true;
+      }
+    }</script><script type="text/javascript">function init() {
         window.matchMedia("(min-width: 500px)").addListener(hitMQ);
       }
 
