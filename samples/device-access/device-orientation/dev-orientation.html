@@ -1,9 +1,49 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="cleartype" content="on"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css"><title>Device orientation</title><style type="text/css">.h5logo {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css">
+    <title>Device orientation</title>
+    <style type="text/css">
+      .h5logo {
         width: 50%;
         display: block;
         margin-left: auto;
         margin-right: auto;
-      }</style><body><div role="main" class="container"><h1>Device Orientation</h1><p>Device orientation is <b><span id="doeSupported">not</span></b> supported on your device.</p><img id="h5logo" src="html5-logo.svg" class="h5logo"><h2>Rotation Data</h2><p><b>alpha:</b> <span id="alpha"></span><br><b>beta:</b> <span id="beta"></span><br><b>gamma:</b> <span id="gamma"></span><br></p><p><b>Last updated:</b> <span id="timestamp"></span></p></div><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      }
+
+    </style>
+  </head>
+  <body>
+    <div role="main" class="container">
+      <h1>Device Orientation</h1>
+      <p>
+        Device orientation is <b><span id="doeSupported">not</span></b> supported 
+        on your device.
+      </p>
+
+      <img id="h5logo" src="html5-logo.svg" class="h5logo">
+
+      <h2>Rotation Data</h2>
+      <p>
+        <b>alpha:</b> <span id="alpha"></span><br>
+        <b>beta:</b> <span id="beta"></span><br>
+        <b>gamma:</b> <span id="gamma"></span><br>
+      </p>
+
+      <p>
+        <b>Last updated:</b> <span id="timestamp"></span>
+      </p>
+
+    </div>
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
@@ -16,7 +56,10 @@
         ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
         isCompleted[sampleName] = true;
       }
-    }</script><script type="text/javascript">var fixed = 2;
+    }
+</script>    <script type="text/javascript">
+
+      var fixed = 2;
       var h5logo  = document.getElementById("h5logo");
       var timestamp = document.getElementById("timestamp");
       var alpha = document.getElementById("alpha");
@@ -45,4 +88,9 @@ var deviceOrientationData;
         } catch (ex) {
           document.getElementById("doeSupported").innerText = "NOT";
         }
-      }</script>
+      }
+
+
+    </script>
+  </body>
+</html>

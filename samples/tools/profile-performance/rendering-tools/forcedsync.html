@@ -1,4 +1,39 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="cleartype" content="on"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css"><title>Diagnosing forced synchronous layouts</title><div role="main" class="container"><body><h1>Timeline demo</h1><p>This demo shows how you can use the Timeline to identify a kind of performance bottle-neck called 'forced synchronous layouts'.</p><h2>Make a recording</h2><p>First you'll make a recording of the animation.</p><ol><li>Click <strong>Start</strong> to start the animation.</li><li>Open the Timeline panel on this page, and go the Frames view.</li><li>Click the Record button in the Timeline.</li><li>After after a second or two (10-12 frames recorded) stop the recording and click <strong>Stop</strong> to stop the animation.</li></ol><style>.mover {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css">
+    <title>Diagnosing forced synchronous layouts</title>
+  </head>
+  <div role="main" class="container">
+  <body>
+      <h1>Timeline demo</h1>
+      
+      <p>
+        This demo shows how you can use the Timeline to identify a kind of performance bottle-neck called 'forced synchronous layouts'.
+      </p>
+
+    <h2>
+        Make a recording
+    </h2>
+
+    <p>
+        First you'll make a recording of the animation.</p>
+    <ol>
+        <li>Click <strong>Start</strong> to start the animation.</li>
+        <li>Open the Timeline panel on this page, and go the Frames view.</li>
+        <li>Click the Record button in the Timeline.</li>
+        <li>After after a second or two (10-12 frames recorded) stop the recording and click <strong>Stop</strong> to stop the animation.</li>
+    </ol>
+
+        <style>
+        .mover {
             background: url("particle.png");
             height: 100px;
                width: 100px;
@@ -17,7 +52,359 @@
 
         #jank-container.hidden{
             display: none;
-        }</style><button id="toggle">Start</button><div id="jank-container" class="hidden"><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div><div class="mover"></div></div></div><script>(function() {
+        }
+
+        </style>
+
+        <button id="toggle">Start</button>
+
+        <div id="jank-container" class="hidden">
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+                <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+                <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+                <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+                <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+                <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        <div class="mover"></div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
             var lastTime = 0;
             var vendors = ['ms', 'moz', 'webkit', 'o'];
             for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
@@ -86,4 +473,8 @@ function toggleAnim(e) {
             }
         }
 
-        btn.addEventListener('click', toggleAnim);</script>
+        btn.addEventListener('click', toggleAnim);
+
+    </script>         
+  </body>
+</html>

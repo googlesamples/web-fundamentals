@@ -1,4 +1,13 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><title>Simple Box Move</title><style>html {
+<!doctype html>
+<html>
+
+  <head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width">
+	  <title>Simple Box Move</title>
+	  <style>
+	  	html {
 	  		background: #f2f2f2;
 	  	}
 
@@ -10,7 +19,15 @@
 			  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 
 			  will-change: transform;
-			}</style><body><div class="box"></div><script>function Box () {
+			}
+	  </style>
+	</head>
+
+	<body>
+		<div class="box"></div>
+
+		<script>
+		function Box () {
 
 		  var animationStartTime = 0;
 		  var animationDuration = 500;
@@ -38,4 +55,8 @@
 		}
 
 		var box = new Box();
-		box.startAnimation();</script>
+		box.startAnimation();
+		</script>
+	</body>
+
+</html>

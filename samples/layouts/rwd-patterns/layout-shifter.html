@@ -1,4 +1,17 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="cleartype" content="on"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css"><link rel="stylesheet" href="layouts-common.css"><style>.container {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css">
+    <link rel="stylesheet" href="layouts-common.css">
+    <style>
+
+      
+.container {
         display: -webkit-flex;
         display: flex;
         -webkit-flex-flow: row wrap;
@@ -26,7 +39,21 @@
           margin-left: auto;
           margin-right: auto;
         }
-      }</style><title>Responsive Web Design Pattern: Layout Shifter</title><body><div class="container" role="main"><div class="c1"></div><div class="c4"><div class="c2"></div><div class="c3"></div></div></div><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      }
+      
+</style>
+    <title>Responsive Web Design Pattern: Layout Shifter</title>
+  </head>
+  <body>
+    <div class="container" role="main">
+      <div class="c1"></div>
+      <div class="c4">
+        <div class="c2"></div>
+        <div class="c3"></div>
+      </div>
+    </div>
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
@@ -39,7 +66,9 @@
         ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
         isCompleted[sampleName] = true;
       }
-    }</script><script type="text/javascript">function init() {
+    }
+</script>    <script type="text/javascript">
+      function init() {
         window.matchMedia("(min-width: 800px)").addListener(hitMQ);
         window.matchMedia("(min-width: 600px)").addListener(hitMQ);
       }
@@ -48,4 +77,8 @@
         sampleCompleted("RWDPatterns-LayoutShifter");
       }
 
-      init();</script>
+      init();
+
+    </script>
+  </body>
+</html>

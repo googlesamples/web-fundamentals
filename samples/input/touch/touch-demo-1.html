@@ -1,4 +1,22 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="cleartype" content="on"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css"><!-- IE Specific to remove tap highlight --><meta name="msapplication-tap-highlight" content="no"><meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui"><title>Touch Example 1</title><style>html, body {
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css">
+    <!-- IE Specific to remove tap highlight -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+    <title>Touch Example 1</title>
+
+    <style>
+      html, body {
         width: 100%;
         height: 100%;
 
@@ -115,7 +133,38 @@
       .promote-layer {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-      }</style><body><section class="content"><div class="swipe-element"><div class="swipe-back"><button></button> <button></button> <button></button> <button></button></div><p class="swipe-front promote-layer">Swipe Me</p></div></section><section class="content"><div class="swipe-element"><div class="swipe-back"><button></button> <button></button> <button></button> <button></button></div><p class="swipe-front promote-layer">Swipe Me Too</p></div></section><script>// Shim for requestAnimationFrame from Paul Irishpaul ir
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <section class="content">
+      <div class="swipe-element">
+        <div class="swipe-back">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <p class="swipe-front promote-layer">Swipe Me</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="swipe-element">
+        <div class="swipe-back">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+        <p class="swipe-front promote-layer">Swipe Me Too</p>
+      </div>
+    </section>
+
+    <script>
+      // Shim for requestAnimationFrame from Paul Irishpaul ir
       // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
       window.requestAnimFrame = (function(){
         'use strict';
@@ -371,7 +420,11 @@ function updateSwipeRestPosition() {
         for(var i = 0; i < swipeRevealItems.length; i++) {
           swipeRevealItems[i].resize();
         }
-      };</script><script>var registerInteraction = function () {
+      };
+    </script>
+
+    <script>
+      var registerInteraction = function () {
         'use strict';
         window.sampleCompleted('touch-demo-1.html-SwipeFrontTouch');
       };
@@ -379,7 +432,11 @@ function updateSwipeRestPosition() {
       var swipeFronts = document.querySelectorAll('.swipe-front');
       for(var i = 0; i < swipeFronts.length; i++) {
         swipeFronts[i].addEventListener('touchstart', registerInteraction);
-      }</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      }
+    </script>
+
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
@@ -392,4 +449,6 @@ function updateSwipeRestPosition() {
         ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
         isCompleted[sampleName] = true;
       }
-    }</script>
+    }
+</script>  </body>
+</html>

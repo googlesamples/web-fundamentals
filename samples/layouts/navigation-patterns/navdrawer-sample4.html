@@ -1,4 +1,23 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="cleartype" content="on"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto"><link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css"><!-- IE Specific to remove tap highlight --><meta name="msapplication-tap-highlight" content="no"><title>Nav Drawer Sample 4</title><link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css"><style>html, body {
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css">
+<!-- IE Specific to remove tap highlight -->
+    <meta name="msapplication-tap-highlight" content="no">
+    
+<title>Nav Drawer Sample 4</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+    <style>
+          html, body {
         width: 100%;
         height: 100%;
         
@@ -396,7 +415,35 @@
         */
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-      }</style><body><header class="app-bar promote-layer"><h1 class="logo"><a href="#">Logo</a></h1><section class="app-bar-actions"></section><button class="menu"><img class="menu-icon" src="./hamburger-icon-light.png"> <img class="close-icon" src="./close-icon-light.png"></button></header><nav class="navdrawer-container promote-layer"><ul><li><a href="#">Item 1</a></li><li><a href="#">Item 2</a></li><li><a href="#">Item 3</a></li><li><a href="#">Item 4</a></li></ul></nav><div class="navdrawer-bg promote-layer"></div><script>var navdrawerContainer = document.querySelector('.navdrawer-container');
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="app-bar promote-layer">
+      <h1 class="logo"><a href="#">Logo</a></h1>
+      <section class="app-bar-actions">
+        
+      </section>
+      <button class="menu">
+        <img class="menu-icon" src="./hamburger-icon-light.png">
+        <img class="close-icon" src="./close-icon-light.png">
+      </button>
+    </header>
+  
+    <nav class="navdrawer-container promote-layer">
+      <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+      </ul>
+    </nav>
+
+    <div class="navdrawer-bg promote-layer"></div>
+
+    <script>
+      var navdrawerContainer = document.querySelector('.navdrawer-container');
       var appbarElement = document.querySelector('.app-bar');
       var darkbgElement = document.querySelector('.navdrawer-bg');
 
@@ -412,10 +459,18 @@
           navdrawerContainer.classList.add('open');
           darkbgElement.classList.add('open');
         }
-      }, true);</script><script>var menuBtn = document.querySelector('.menu');
+      }, true);
+    </script>
+
+    <script>
+      var menuBtn = document.querySelector('.menu');
       menuBtn.addEventListener('click', function() {
         sampleCompleted('navdrawer-sample4.html-menubtnclick');
-      }, true);</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      }, true);
+    </script>
+
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
     e.src='//www.google-analytics.com/analytics.js';
@@ -428,4 +483,6 @@
         ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
         isCompleted[sampleName] = true;
       }
-    }</script>
+    }
+</script>  </body>
+</html>

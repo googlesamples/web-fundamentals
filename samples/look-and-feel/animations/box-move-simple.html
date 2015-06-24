@@ -1,4 +1,13 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><title>Simple Box Move</title><style>html {
+<!doctype html>
+<html>
+
+  <head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width">
+	  <title>Simple Box Move</title>
+	  <style>
+	  	html {
 	  		background: #f2f2f2;
 	  	}
 
@@ -26,7 +35,20 @@
 			.box.move {
 				-webkit-transform: translate(100px, 100px);
 			  transform: translate(100px, 100px);
-			}</style><body><p>Click on the box to animate it</p><div class="box"></div><script>var box = document.querySelector('.box');
+			}
+	  </style>
+	</head>
+
+	<body>
+		<p>Click on the box to animate it</p>
+		<div class="box"></div>
+
+		<script>
+			var box = document.querySelector('.box');
 			box.addEventListener('click', function() {
 				box.classList.toggle('move');
-			});</script>
+			});
+		</script>
+	</body>
+
+</html>
