@@ -47,23 +47,25 @@
     </style>
   </head>
   <body>
-    <h1>
-      Image gallery mixed content!
-    </h1>
-    <p>
-      View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html">HTTP</a> - <a href="httpS://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html">HTTPS</a>
-    </p>
-    <p> 
-      Image galleries often rely on the &lt;img&gt; tag src attribute to display thumbnail images on the page, the anchor ( &lt;a&gt; ) tag href attribute is then used to load the full sized image for the gallery overlay. Normally &lt;a&gt; tags do not cause mixed content, but in this case the jQuery code overrides the default link behavior &mdash; to navigate to a new page &mdash; and instead loads the HTTP image on this page. While this content isn't blocked, modern browsers display a warning in the JavaScript console. This can be seen when the page is viewed over HTTPS and the thumbnail is clicked.
-    </p>
-    CLICK ME! -->
-    
+    <div role="main">
+      <h1>
+        Image gallery mixed content!
+      </h1>
+      <p>
+        View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html">HTTP</a> - <a href="httpS://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html">HTTPS</a>
+      </p>
+      <p> 
+        Image galleries often rely on the &lt;img&gt; tag src attribute to display thumbnail images on the page, the anchor ( &lt;a&gt; ) tag href attribute is then used to load the full sized image for the gallery overlay. Normally &lt;a&gt; tags do not cause mixed content, but in this case the jQuery code overrides the default link behavior &mdash; to navigate to a new page &mdash; and instead loads the HTTP image on this page. While this content isn't blocked, modern browsers display a warning in the JavaScript console. This can be seen when the page is viewed over HTTPS and the thumbnail is clicked.
+      </p>
+      CLICK ME! -->
+      
 <a class="gallery" href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy.jpg">
-      <img src="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy-thumb.jpg">
-    </a>
-    
+        <img src="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy-thumb.jpg">
+      </a>
+      
 <div class="overlay overlay-background" style="display: none;"></div>
-    <div class="overlay overlay-foreground" style="display: none;"></div>
+      <div class="overlay overlay-foreground" style="display: none;"></div>
+    </div>
     <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
