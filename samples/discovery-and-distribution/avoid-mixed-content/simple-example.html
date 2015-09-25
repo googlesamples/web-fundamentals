@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css">
     <title>Simple mixed content example</title>
   </head>
   <body>
@@ -8,14 +16,29 @@
       Simple mixed content example!
     </h1>
     <p>
-      View page over: <a href="http://localhost:8888/simple-example.html">HTTP</a> - <a href="https://localhost:4443/simple-example.html">HTTPS</a>
+      View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html">HTTP</a> - <a href="httpS://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html">HTTPS</a>
     </p>
     <p>
       This page loads the script simple-example.js using HTTP. This is the simplest case of mixed content. When the simple-example.js file is requested by the browser, an attacker can inject code into the returned content and take control of the entire page. Thankfully, most modern browsers block this type of dangerous content by default and display an error in the JavaScript console. This can be seen when the page is viewed over HTTPS.
     </p>
     <div id="output">Waiting for insecure script to run...</div>
     
-<script src="http://localhost:8888/simple-example.js"></script>
+<script src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.js"></script>
     
-</body>
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-24532603-1');ga('send','pageview');
+
+    var isCompleted = {};
+    function sampleCompleted(sampleName){
+      if (ga && !isCompleted.hasOwnProperty(sampleName)) {
+        ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+        isCompleted[sampleName] = true;
+      }
+    }
+</script>  </body>
 </html>

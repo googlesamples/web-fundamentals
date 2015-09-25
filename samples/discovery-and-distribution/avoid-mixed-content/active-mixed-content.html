@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css">
     <title>Active mixed content example</title>
     
 <!-- An insecure script file loaded on a secure page -->
-    <script src="http://localhost:8888/simple-example.js"></script>
+    <script src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.js"></script>
   
     <!-- An insecure stylesheet loaded on a secure page -->
-    <link href="http://localhost:8888/style.css" rel="stylesheet">
+    <link href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/style.css" rel="stylesheet">
 
     <style>
       .insecure-background {
         /* An insecure resources loaded from a style property on a secure page, this can   
            happen in many places including, @font-face, cursor, background-image, and so on. */
-        background: url('http://localhost:8888/petelepage-thumb.jpg') no-repeat;
+        background: url('http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy-thumb.jpg') no-repeat;
       }
     </style>
     
@@ -41,7 +49,7 @@
       Active mixed content!
     </h1>
     <p>
-      View page over: <a href="http://localhost:8888/active-mixed-content.html">HTTP</a> - <a href="https://localhost:4443/active-mixed-content.html">HTTPS</a>
+      View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/active-mixed-content.html">HTTP</a> - <a href="httpS://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/active-mixed-content.html">HTTPS</a>
     </p>
     <p>
       Several examples of active mixed content. When viewed over HTTPS most browsers block this content and display errors in the JavaScript console.
@@ -56,7 +64,7 @@
     <p>Loading insecure iframe...</p>
     
 <!-- An insecure iframed page loaded on a secure page -->
-    <iframe src="http://localhost:8888/image-gallery-example.html"></iframe>
+    <iframe src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content//image-gallery-example.html"></iframe>
     
     <!-- Flash resources also qualify as active mixed content and pose a
     serious security risk. Be sure to look for <object> tags with type set
@@ -69,10 +77,25 @@
         var jsonData = JSON.parse(request.responseText);
         document.getElementById('output').innerHTML += '<br>' + jsonData.data;
       });
-      request.open("GET", "http://localhost:8888/xmlhttprequest-data.js", true);
+      request.open("GET", "http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-data.js", true);
       request.send();
     </script>
     
 <div id="output">Waiting for insecure script to run...</div>
-  </body>
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-24532603-1');ga('send','pageview');
+
+    var isCompleted = {};
+    function sampleCompleted(sampleName){
+      if (ga && !isCompleted.hasOwnProperty(sampleName)) {
+        ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+        isCompleted[sampleName] = true;
+      }
+    }
+</script>  </body>
 </html>

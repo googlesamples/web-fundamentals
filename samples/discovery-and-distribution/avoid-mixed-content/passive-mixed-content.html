@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/normalize.css">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/main.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+<link rel="stylesheet" href="https://googlesamples.github.io/web-fundamentals/samples/css/base.css">
     <title>Passive mixed content example</title>
     <style>
       audio, img, video {
@@ -14,7 +22,7 @@
       Passive mixed content!
     </h1>
     <p>
-      View page over: <a href="http://localhost:8888/passive-mixed-content.html">HTTP</a> - <a href="https://localhost:4443/passive-mixed-content.html">HTTPS</a>
+      View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/passive-mixed-content.html">HTTP</a> - <a href="httpS://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/passive-mixed-content.html">HTTPS</a>
     </p>
     <p>
       Several examples of passive mixed content. When viewed over HTTPS most browsers do <b>not</b> block this content but instead display warnings in the JavaScript console.
@@ -22,13 +30,28 @@
 
     
 <!-- An insecure audio file loaded on a secure page -->
-    <audio src="http://localhost:8888/symphony-5-beethoven.mp3" type="audio/mp3" controls></audio>
+    <audio src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content//symphony-5-beethoven.mp3" type="audio/mp3" controls></audio>
 
     <!-- An insecure image loaded on a secure page -->
-    <img src="http://localhost:8888/petelepage-thumb.jpg">
+    <img src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content//puppy-thumb.jpg">
 
     <!-- An insecure video file loaded on a secure page -->
     <video src="http://developers.google.com/web/fundamentals/media/video/video/chrome.webm" type="video/webm" controls></video>
     
-</body>
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-24532603-1');ga('send','pageview');
+
+    var isCompleted = {};
+    function sampleCompleted(sampleName){
+      if (ga && !isCompleted.hasOwnProperty(sampleName)) {
+        ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+        isCompleted[sampleName] = true;
+      }
+    }
+</script>  </body>
 </html>
