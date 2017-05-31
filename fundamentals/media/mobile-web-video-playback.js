@@ -135,6 +135,8 @@ toggleFullscreenButton.addEventListener('click', function(event) {
 function requestFullscreenVideo() {
   if (videoContainer.requestFullscreen) {
     videoContainer.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) {
+    video.webkitRequestFullscreen();
   } else {
     video.webkitEnterFullscreen();
   }
